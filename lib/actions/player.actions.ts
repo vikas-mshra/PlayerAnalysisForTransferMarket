@@ -9,7 +9,7 @@ export async function fetchPlayerDetails() {
 
     const topPlayers = Player.find()
       .sort({ highest_market_value_in_eur: -1 })
-      .limit(50); // Limit the result to the top 5 players
+      .limit(50); // Limit the result to the top 50 players
       
     return topPlayers;
   } catch (error) {

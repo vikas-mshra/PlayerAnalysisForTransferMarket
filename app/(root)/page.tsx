@@ -27,28 +27,9 @@ interface Player {
 export default async function Home() {
   let players: any;
   players = await fetchPlayerDetails();
-  console.log(players);
   return (
-    <main>
-      <h1>Welcome!!</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Position</th>
-            <th>Club Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          {players.map((player: Player, index: number) => (
-            <tr key={player.player_id}>
-              <td>{player.name}</td>
-              <td>{player.position}</td>
-              <td>{player.current_club_name}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <main className="main-container">
+      <h1 className="head-text">Welcome!!</h1>
     </main>
   );
 }
